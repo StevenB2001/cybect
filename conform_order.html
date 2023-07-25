@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>E-Commerce</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./assets/css/style.css">
+	</head>
+	<body>
+		<div class="main_body">
+			<div class="preloader" id="preloader"><div class="loader"></div></div>
+			<div class="header" id="header">
+				<div class="container">
+					<div class="header_box">
+						<div class="logo_box">
+							<img src="./assets/images/logo.png" alt="logo">
+						</div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<div class="cart_icon"><i class="fa-solid fa-bag-shopping"></i></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cart -->
+			<div class="cart_main_container">
+				<div class="container">
+					<div class="cart_main_box">
+						<h2 style="text-align: center;padding: 20px 0;">Thank You for order.</h2>
+						<p>Order ID : <span id="orderId"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			$("#preloader").hide();
+			var a = location.href;
+			var b = a.substring(a.indexOf("?")+4);
+			$("#orderId").text(b);
+		</script>
+	</body>
+</html>
